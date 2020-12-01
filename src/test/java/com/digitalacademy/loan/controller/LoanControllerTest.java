@@ -89,7 +89,7 @@ public class LoanControllerTest {
         JSONObject status = new JSONObject(resp.getString("status"));
 
         assertEquals("LOAN4002", status.get("code"));
-        assertEquals("Loan information not found", status.get("message"));
+        assertEquals("Loan information not found ", status.get("message"));
     }
     @DisplayName("Test get loan info by id equals 3 should throw Exception: Test throw new exception")
     @Test

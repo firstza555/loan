@@ -40,7 +40,7 @@ public class LoanController {
 
         }catch (LoanException e){
             log.error("Exception by id: {}",id);
-            LoanError loanError = LoanError.GET_LOAN_INFO_EXCEPTION;
+            LoanError loanError = e.getLoanError();
 
             return ResponseEntity.ok(
                     new ResponseModel(new StatusModel(loanError.getCode(),loanError.getMessage()))
